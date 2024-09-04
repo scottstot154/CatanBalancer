@@ -283,47 +283,47 @@ outerCoord6 = np.matmul(rotArr,outerCoord5)
 oceanAlpha = 0.2
 
 xs, ys = zip(*outerCoord1) #create lists of x and y values
-ax.plot(xs,ys,color='blue', alpha = oceanAlpha) 
+ax.plot(xs,ys,color='#c7c7c7', alpha = oceanAlpha) 
 
 outerCoord2 = np.transpose(outerCoord2)
 outerCoord2 = outerCoord2.tolist()
 xs, ys = zip(*outerCoord2) #create lists of x and y values
-ax.plot(xs,ys,color='blue', alpha = oceanAlpha) 
+ax.plot(xs,ys,color='#c7c7c7', alpha = oceanAlpha) 
 
 outerCoord3 = np.transpose(outerCoord3)
 outerCoord3 = outerCoord3.tolist()
 xs, ys = zip(*outerCoord3) #create lists of x and y values
-ax.plot(xs,ys,color='blue', alpha = oceanAlpha) 
+ax.plot(xs,ys,color='#c7c7c7', alpha = oceanAlpha) 
 
 outerCoord4 = np.transpose(outerCoord4)
 outerCoord4 = outerCoord4.tolist()
 xs, ys = zip(*outerCoord4) #create lists of x and y values
-ax.plot(xs,ys,color='blue', alpha = oceanAlpha) 
+ax.plot(xs,ys,color='#c7c7c7', alpha = oceanAlpha) 
 
 outerCoord5 = np.transpose(outerCoord5)
 outerCoord5 = outerCoord5.tolist()
 xs, ys = zip(*outerCoord5) #create lists of x and y values
-ax.plot(xs,ys,color='blue', alpha = oceanAlpha) 
+ax.plot(xs,ys,color='#c7c7c7', alpha = oceanAlpha) 
 
 outerCoord6 = np.transpose(outerCoord6)
 outerCoord6 = outerCoord6.tolist()
 xs, ys = zip(*outerCoord6) #create lists of x and y values
-ax.plot(xs,ys,color='blue', alpha = oceanAlpha) 
+ax.plot(xs,ys,color='#c7c7c7', alpha = oceanAlpha) 
 
 for c in doubleCoord:
 	
 	if c[3] == 'sheep':
-		tileColour = 'green'
+		tileColour = '#80ff00'
 	elif c[3] == 'wood':
-		tileColour = '#023020'
+		tileColour = '#064206'
 	elif c[3] == 'wheat':
 		tileColour = 'yellow'
 	elif c[3] == 'brick':
 		tileColour = 'red'
 	elif c[3] == 'stone':
-		tileColour = 'gray'
+		tileColour = '#8c46db'
 	elif c[3] == 'desert':
-		tileColour = 'orange'
+		tileColour = 'white'
 		
 	hexagon = RegularPolygon((c[0], c[1]*1.5*hexRad), numVertices=6, radius=hexRad, alpha=0.6, edgecolor='k', facecolor=tileColour)
 	ax.add_patch(hexagon)
@@ -331,17 +331,17 @@ for c in doubleCoord:
 for p in portCoord:
 	
 	if p[5] == 'sheep':
-		portColour = 'green'
+		portColour = '#80ff00'
 	elif p[5] == 'wood':
-		portColour = '#023020'
+		portColour = '#064206'
 	elif p[5] == 'wheat':
 		portColour = 'yellow'
 	elif p[5] == 'brick':
 		portColour = 'red'
 	elif p[5] == 'stone':
-		portColour = 'gray'
+		portColour = '#8c46db'
 	elif p[5] == '?':
-		portColour = 'black'
+		portColour = '#3691d6'
 	
 	circlePort = plt.Circle((p[0], p[1]), 0.2, edgecolor=portColour, fill=False)
 	ax.add_patch(circlePort)
@@ -359,7 +359,7 @@ for c in doubleCoord:
 			textColour = 'red'
 		else:
 			textColour = 'black'
-		plt.text(c[0],c[1]*1.5*hexRad,c[4],ha='center',va='center',size=6, color=textColour)
+		plt.text(c[0],c[1]*1.5*hexRad,c[4],ha='center',va='center',size=1, color=textColour)
 
 #plt.autoscale(enable = True)
 plt.show()
